@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <!-- Error message display -->
+    <p th:text="${emsg}" style="color: red;"></p>
+
+    <div class="container">
+        <h2>Login Here..!</h2>
+        <form action="/login" th:object="${login}" method="post">
+           <table>
+    <tr>
+    <td>Email: <input type="email" th:field="*{email}" required/></td>
+    </tr>
+    <tr>
+        <td>Password: <input type="password" th:field="*{password}" required/></td>
+    </tr>
+    <tr>
+        <td><input type="submit" value="Login" class="btn btn-primary"/></td>
+    </tr>
+</table>
+
+        </form>
+    </div>
+</body>
+</html>
+
+		
+		Don't Have An Account?<a href="/register">Register Here.. </a>
+		
+		
+		
+		
+	</div>
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
